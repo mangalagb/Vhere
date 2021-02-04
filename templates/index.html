@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <title>Vhere Data Discovery</title>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <h1></h1>
+
+  <h2>Default query</h2>
+  {% for title, reco in recos %}
+    <p>{{ title }}</p>
+    <p>{{ reco }}</p>
+    <h3>============================================================</h3>
+  {% endfor %}
+
+</body>
+</html>

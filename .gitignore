@@ -1,0 +1,7 @@
+env/*
+.gcloudignore
+.idea/*
+
+
+# Python pycache:
+__pycache__/
