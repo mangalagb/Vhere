@@ -14,18 +14,20 @@
 
 # [START gae_python38_render_template]
 
-from flask import Flask, render_template
+from flask import Flask, request, render_template
 import vhere.code.Recommender as reco
 
 app = Flask(__name__)
 
+@app.route("/")
+def homepage():
+    return render_template("index.html", title="HOME PAGE")
 
-@app.route('/')
-def root():
-    # For the sake of example, use static information to inflate the template.
-    # This will be replaced with real information in later steps.
-    default_query = "I want to know more about WINDII and Doppler and performance"
-    return render_template('index.html', recos=reco.recommend(default_query).items())
+
+@app.route('/results', methods=['POST'])
+def results():
+    default_query = request.form['text']
+    return render_template('result.html', recos=reco.recommend(default_query).items())
 
 
 if __name__ == '__main__':

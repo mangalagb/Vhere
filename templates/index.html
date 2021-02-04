@@ -1,20 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Vhere Data Discovery</title>
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
-  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
 <body>
 
-  <h1></h1>
+<h1>Type your query to search CSA/NASA datasets</h1>
+<br><br>
 
-  <h2>Default query</h2>
-  {% for title, reco in recos %}
-    <p>{{ title }}</p>
-    <p>{{ reco }}</p>
-    <h3>============================================================</h3>
-  {% endfor %}
+<form action="{{ url_for('results') }}" method="post">
+    <textarea name="text" rows="5" cols="100" style="text-align:left;">I want to know more about WINDII and Doppler and performance</textarea>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<br><br><br><br>
+<p>
+<h3>Some sample queries for you to try out:</h3>
+
+<ul>
+  <li>I want to know more about earth’s atmosphere and geography</li>
+  <li>How did the universe begin? What are the earliest stars?</li>
+  <li>Give me data about Mars</li>
+</ul>
+<p>
+
 
 </body>
 </html>

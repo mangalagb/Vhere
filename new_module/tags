@@ -1,0 +1,71 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+About this site	data/raw_data/html_files/Canada_open_data.html	/^<\/section><section class="lng-ofr"><h3>Language selection<\/h3><ul class="list-inline"><li><a h/;"	j
+About this site	data/raw_data/html_files/Canada_open_data.html	/^<h2>About this site<\/h2>$/;"	i
+Access the data	data/raw_data/html_files/Canada_open_data.html	/^	<h1 property="name" id="wb-cont">Access the data<\/h1>$/;"	h
+Content	data/raw_data/html_files/Canada_open_data.html	/^			<div id="filters"><div class="panel panel-primary mrgn-tp-lg"><div class="panel-heading">	<h2/;"	i
+Government of Canada footer	data/raw_data/html_files/Canada_open_data.html	/^<h2>Government of Canada footer<\/h2>$/;"	i
+Information	data/raw_data/html_files/Canada_open_data.html	/^<h3 class="wb-inv">Information<\/h3>$/;"	j
+Language selection	data/raw_data/html_files/Canada_open_data.html	/^<\/section><section class="lng-ofr"><h3>Language selection<\/h3><ul class="list-inline"><li><a h/;"	j
+Language selection	data/raw_data/html_files/Canada_open_data.html	/^<li id="wb-lng"><h2>Language selection<\/h2>$/;"	i
+Search	data/raw_data/html_files/Canada_open_data.html	/^			<h2 class="wb-inv">Search<\/h2>$/;"	i
+Search	data/raw_data/html_files/Canada_open_data.html	/^<h2>Search<\/h2>$/;"	i
+Search	data/raw_data/html_files/Canada_open_data.html	/^<h3>Search<\/h3>$/;"	j
+Search Results	data/raw_data/html_files/Canada_open_data.html	/^				<h2 id="search-result">Search Results<\/h2>$/;"	i
+Search and menus	data/raw_data/html_files/Canada_open_data.html	/^<h2>Search and menus<\/h2>$/;"	i
+Share this page	data/raw_data/html_files/Canada_open_data.html	/^		<div class="wb-share wb-init wb-share-inited" data-wb-share="{&quot;lnkClass&quot;: &quot;btn /;"	i
+Social Media	data/raw_data/html_files/Canada_open_data.html	/^<h3 class="wb-inv">Social Media<\/h3>$/;"	j
+Subjects	data/raw_data/html_files/Canada_open_data.html	/^			<div id="filters"><div class="panel panel-primary mrgn-tp-lg"><div class="panel-heading">	<h2/;"	i
+Topics menu	data/raw_data/html_files/Canada_open_data.html	/^	<h2>Topics menu<\/h2>$/;"	i
+Topics menu	data/raw_data/html_files/Canada_open_data.html	/^<\/section><section class="lng-ofr"><h3>Language selection<\/h3><ul class="list-inline"><li><a h/;"	j
+You are here:	data/raw_data/html_files/Canada_open_data.html	/^<h2>You are here:<\/h2>$/;"	i
+convert_lowercase_and_remove_punctuation	BuildTFIDFModel.py	/^def convert_lowercase_and_remove_punctuation(text):$/;"	f
+convert_lowercase_and_remove_punctuation	code/BuildTFIDFModel.py	/^def convert_lowercase_and_remove_punctuation(text):$/;"	f
+create_and_train_tf_idf_model	BuildTFIDFModel.py	/^def create_and_train_tf_idf_model():$/;"	f
+create_and_train_tf_idf_model	code/BuildTFIDFModel.py	/^def create_and_train_tf_idf_model():$/;"	f
+extract_text_from_div	Scraper.py	/^def extract_text_from_div(text_div):$/;"	f
+extract_text_from_div	code/Scraper.py	/^def extract_text_from_div(text_div):$/;"	f
+find_bigrams	BuildTFIDFModel.py	/^def find_bigrams(corpus_dict):$/;"	f
+find_bigrams	code/BuildTFIDFModel.py	/^def find_bigrams(corpus_dict):$/;"	f
+find_lemma	BuildTFIDFModel.py	/^def find_lemma(tokens):$/;"	f
+find_lemma	Recommender.py	/^def find_lemma(tokens):$/;"	f
+find_lemma	code/BuildTFIDFModel.py	/^def find_lemma(tokens):$/;"	f
+find_lemma	code/Recommender.py	/^def find_lemma(tokens):$/;"	f
+find_title_and_description	Scraper.py	/^def find_title_and_description(data):$/;"	f
+find_title_and_description	code/Scraper.py	/^def find_title_and_description(data):$/;"	f
+get_recommendations	Recommender.py	/^def get_recommendations(corpus_dict, cosine_similarity_matrix):$/;"	f
+get_recommendations	code/Recommender.py	/^def get_recommendations(corpus_dict, cosine_similarity_matrix):$/;"	f
+get_user_query	Recommender.py	/^def get_user_query(query_dict):$/;"	f
+get_user_query	code/Recommender.py	/^def get_user_query(query_dict):$/;"	f
+main	BuildTFIDFModel.py	/^def main():$/;"	f
+main	Recommender.py	/^def main():$/;"	f
+main	Scraper.py	/^def main():$/;"	f
+main	code/BuildTFIDFModel.py	/^def main():$/;"	f
+main	code/Recommender.py	/^def main():$/;"	f
+main	code/Scraper.py	/^def main():$/;"	f
+preprocess	BuildTFIDFModel.py	/^def preprocess(corpus_dict):$/;"	f
+preprocess	code/BuildTFIDFModel.py	/^def preprocess(corpus_dict):$/;"	f
+print_recommendations	Recommender.py	/^def print_recommendations(corpus_dict, sorted_recommendation_dict, presult=False):$/;"	f
+print_recommendations	code/Recommender.py	/^def print_recommendations(corpus_dict, sorted_recommendation_dict):$/;"	f
+process_query	Recommender.py	/^def process_query(query):$/;"	f
+process_query	code/Recommender.py	/^def process_query(query):$/;"	f
+punctuation	BuildTFIDFModel.py	/^from string import punctuation as punctuation$/;"	x
+punctuation	code/BuildTFIDFModel.py	/^from string import punctuation as punctuation$/;"	x
+readHtml	Scraper.py	/^def readHtml():$/;"	f
+readHtml	code/Scraper.py	/^def readHtml():$/;"	f
+read_corpus	BuildTFIDFModel.py	/^def read_corpus():$/;"	f
+read_corpus	code/BuildTFIDFModel.py	/^def read_corpus():$/;"	f
+recommend	Recommender.py	/^def recommend(query):$/;"	f
+remove_stop_words	BuildTFIDFModel.py	/^def remove_stop_words(data):$/;"	f
+remove_stop_words	code/BuildTFIDFModel.py	/^def remove_stop_words(data):$/;"	f
+tokenize	BuildTFIDFModel.py	/^def tokenize(text):$/;"	f
+tokenize	Recommender.py	/^def tokenize(text):$/;"	f
+tokenize	code/BuildTFIDFModel.py	/^def tokenize(text):$/;"	f
+tokenize	code/Recommender.py	/^def tokenize(text):$/;"	f
+write_data_summaries_to_file	Scraper.py	/^def write_data_summaries_to_file(summary_dict):$/;"	f
+write_data_summaries_to_file	code/Scraper.py	/^def write_data_summaries_to_file(summary_dict):$/;"	f
