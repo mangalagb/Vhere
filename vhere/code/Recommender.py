@@ -2,9 +2,6 @@ import collections
 import json
 import pickle
 from pathlib import Path
-
-import nltk
-from nltk.tokenize import word_tokenize
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -15,10 +12,8 @@ def process_query(query):
     vectorizer_path = base_path / "data/trained_model/corpus_vectorizer.pkl"
     corpus_tfidf_path = base_path / "data/trained_model/corpus_tfidf.pkl"
 
-    print("1__________________________")
     print(vectorizer_path)
     corpus_vectorizer = pickle.load(open(vectorizer_path, "rb"))
-    print("2__________________________")
     print("ui")
     corpus_tfidf = pickle.load(open(corpus_tfidf_path, "rb"))
     corpus_dict = collections.OrderedDict()
@@ -69,24 +64,21 @@ def print_recommendations(corpus_dict, sorted_recommendation_dict, presult=False
     return result
 
 
-# Function to tokenize the text blob
-def tokenize(text):
-    print("starting tokenize")
-    tokens = word_tokenize(text)
-    print("finished tokenize")
-
-
-    lemma = find_lemma(tokens)
-    return lemma
-
-# Lemmatize words for better matching
-def find_lemma(tokens):
-    wordnet_lemmatizer = nltk.WordNetLemmatizer()
-    result = []
-    for word in tokens:
-        lemma_word = wordnet_lemmatizer.lemmatize(word)
-        result.append(lemma_word)
-    return result
+# # Function to tokenize the text blob
+# def tokenize(text):
+#     tokens = word_tokenize(text)
+#     lemma = find_lemma(tokens)
+#     return lemma
+#
+#
+# # Lemmatize words for better matching
+# def find_lemma(tokens):
+#     wordnet_lemmatizer = nltk.WordNetLemmatizer()
+#     result = []
+#     for word in tokens:
+#         lemma_word = wordnet_lemmatizer.lemmatize(word)
+#         result.append(lemma_word)
+#     return result
 
 def get_user_query(query_dict):
     # Read the input document that needs to be compared
@@ -101,9 +93,6 @@ def recommend(query):
     return print_recommendations(corpus_dict, recommendation_dict)
 
 def main():
-    # query = "Tell me about mars"
-    # recommend(query)
-
     query_dict = {"query": "I want to know more about WINDII and Doppler and performance"}
 
     user_query = get_user_query(query_dict)
