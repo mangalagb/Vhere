@@ -2,8 +2,10 @@ import collections
 import json
 import pickle
 from pathlib import Path
-from sklearn.metrics.pairwise import cosine_similarity
 
+import nltk
+from nltk import word_tokenize
+from sklearn.metrics.pairwise import cosine_similarity
 
 def process_query(query):
     # Paths to load the trained model
@@ -12,9 +14,7 @@ def process_query(query):
     vectorizer_path = base_path / "data/trained_model/corpus_vectorizer.pkl"
     corpus_tfidf_path = base_path / "data/trained_model/corpus_tfidf.pkl"
 
-    print(vectorizer_path)
     corpus_vectorizer = pickle.load(open(vectorizer_path, "rb"))
-    print("ui")
     corpus_tfidf = pickle.load(open(corpus_tfidf_path, "rb"))
     corpus_dict = collections.OrderedDict()
 
@@ -63,22 +63,21 @@ def print_recommendations(corpus_dict, sorted_recommendation_dict, presult=False
             print("-----------------------------------------------------")
     return result
 
+# Function to tokenize the text blob
+def tokenize(text):
+    tokens = word_tokenize(text)
+    lemma = find_lemma(tokens)
+    return lemma
 
-# # Function to tokenize the text blob
-# def tokenize(text):
-#     tokens = word_tokenize(text)
-#     lemma = find_lemma(tokens)
-#     return lemma
-#
-#
-# # Lemmatize words for better matching
-# def find_lemma(tokens):
-#     wordnet_lemmatizer = nltk.WordNetLemmatizer()
-#     result = []
-#     for word in tokens:
-#         lemma_word = wordnet_lemmatizer.lemmatize(word)
-#         result.append(lemma_word)
-#     return result
+
+# Lemmatize words for better matching
+def find_lemma(tokens):
+    wordnet_lemmatizer = nltk.WordNetLemmatizer()
+    result = []
+    for word in tokens:
+        lemma_word = wordnet_lemmatizer.lemmatize(word)
+        result.append(lemma_word)
+    return result
 
 def get_user_query(query_dict):
     # Read the input document that needs to be compared
@@ -86,6 +85,9 @@ def get_user_query(query_dict):
 
 
 def recommend(query):
+    #Build model
+    #build_TFDIF_model.build_model()
+
     qdict = {"query": query}
     user_query = get_user_query(qdict)
     corpus_dict, cosine_similarity_matrix = process_query(user_query)

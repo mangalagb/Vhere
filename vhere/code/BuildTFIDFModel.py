@@ -1,6 +1,7 @@
 import json
 import pickle
 from string import punctuation as punctuation
+from pathlib import Path
 
 import nltk
 from nltk.corpus import stopwords
@@ -10,7 +11,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 # Read the crawled summary files of CSA data
 def read_corpus():
     # Paths to load the summary data
-    path = "../data/raw_data/summaries/summary_file.txt"
+    base_path = Path(__file__).parent.parent
+    path = base_path / "data/raw_data/summaries/summary_file.txt"
 
     with open(path, 'r') as read_file:
         corpus_dict = json.load(read_file)
@@ -74,12 +76,19 @@ def create_and_train_tf_idf_model():
 
 def write_mode_to_file(vectorizer, corpus_tfidf):
     # Paths to dump the trained ML model
-    vectorizer_path = "../data/trained_model/corpus_vectorizer.pkl"
-    corpus_tfidf_path = "../data/trained_model/corpus_tfidf.pkl"
+    base_path = Path(__file__).parent.parent
+    vectorizer_path = base_path / "data/trained_model/corpus_vectorizer.pkl"
+    corpus_tfidf_path = base_path / "data/trained_model/corpus_tfidf.pkl"
 
     pickle.dump(vectorizer, open(vectorizer_path, "wb"))
     pickle.dump(corpus_tfidf, open(corpus_tfidf_path, "wb"))
     print("Finished writing the trained ML model to file.")
+
+def build_model():
+    vectorizer, corpus_tfidf = create_and_train_tf_idf_model()
+    write_mode_to_file(vectorizer, corpus_tfidf)
+    print("Finished writing file")
+
 
 if __name__ == "__main__":
     vectorizer, corpus_tfidf = create_and_train_tf_idf_model()

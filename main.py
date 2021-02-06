@@ -13,7 +13,6 @@
 # limitations under the License.
 
 # [START gae_python38_render_template]
-import nltk
 from flask import Flask, request, render_template
 import vhere.code.Recommender as reco
 
@@ -28,22 +27,6 @@ def homepage():
 def results():
     default_query = request.form['text']
     return render_template('result.html', recos=reco.recommend(default_query).items())
-
-#Function to tokenize the text blob
-def tokenize(text):
-    tokens = nltk.word_tokenize(text)
-    lemma = find_lemma(tokens)
-    return lemma
-
-# Lemmatize words for better matching
-def find_lemma(tokens):
-    wordnet_lemmatizer = nltk.WordNetLemmatizer()
-    result = []
-    for word in tokens:
-        lemma_word = wordnet_lemmatizer.lemmatize(word)
-        result.append(lemma_word)
-    return result
-
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
